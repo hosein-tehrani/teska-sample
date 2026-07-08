@@ -4,8 +4,6 @@ import MainLayout from "@/layouts/MainLayout";
 
 import HomePage from "@/pages/Home";
 import TodosPage from "@/pages/Todos";
-import WeatherPage from "@/pages/Weather";
-import SettingsPage from "@/pages/Settings";
 
 const router = createBrowserRouter([
   {
@@ -19,14 +17,6 @@ const router = createBrowserRouter([
       {
         path: "todos",
         element: <TodosPage />,
-      },
-      {
-        path: "weather",
-        element: <WeatherPage />,
-      },
-      {
-        path: "settings",
-        element: <SettingsPage />,
       },
     ],
   },

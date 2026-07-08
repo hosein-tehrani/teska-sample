@@ -20,9 +20,6 @@ export default function Header({ onMenuClick }: HeaderProps) {
   const theme = useTheme();
   const toggleTheme = useAppStore((state) => state.toggleTheme);
   const Ptheme = useAppStore((state) => state.theme);
-  const language = useAppStore((state) => state.language);
-
-  const setLanguage = useAppStore((state) => state.setLanguage);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
@@ -41,19 +38,10 @@ export default function Header({ onMenuClick }: HeaderProps) {
             <MenuRounded />
           </IconButton>
         )}
+        <Box sx={{ flexGrow: 1 }} />
         <Button onClick={toggleTheme}>
           {Ptheme === "dark" ? <Sunny /> : <Bedtime />}
         </Button>
-        <Button onClick={() => setLanguage(language === "en" ? "fa" : "en")}>
-          {language.toUpperCase()}
-        </Button>
-        <Box sx={{ flexGrow: 1 }} />
-
-        {/* Theme */}
-
-        {/* Language */}
-
-        {/* Avatar */}
       </Toolbar>
     </AppBar>
   );

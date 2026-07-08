@@ -42,8 +42,34 @@
   },
   "profileDialog": {
     "title": "خوش آمدید 👋",
-    "description": "لطفاً نام خود را در پروفایل بروزرسانی کنید.",
+    "description": "لطفاً نام خود را بروزرسانی کنید.",
     "goToSettings": "رفتن به تنظیمات"
+  },
+  "weather": {
+    "city": "شهر",
+    "forecast": "پیش‌بینی",
+    "max": "حداکثر",
+    "min": "حداقل",
+    "wind": "باد",
+    "humidity": "رطوبت",
+    "error": "خطا در دریافت اطلاعات آب و هوا.",
+    "clearSky": "آسمان صاف",
+    "partlyCloudy": "نیمه ابری",
+    "cloudy": "ابری",
+    "fog": "مه",
+    "rain": "بارانی",
+    "snow": "برفی",
+    "thunderstorm": "رعد و برق",
+    "status": {
+      "clear": "آسمان صاف",
+      "partlyCloudy": "کمی ابری",
+      "cloudy": "ابری",
+      "fog": "مه",
+      "rain": "بارانی",
+      "snow": "برفی",
+      "thunderstorm": "رعد و برق",
+      "unknown": "نامشخص"
+    }
   },
   "settings": {
     "title": "تنظیمات",

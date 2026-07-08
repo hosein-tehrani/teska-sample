@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 
 import {
-  Card,
-  CardContent,
   Stack,
   ToggleButton,
   ToggleButtonGroup,
@@ -11,22 +9,16 @@ import {
 
 import { useAppStore, type Language } from "@/store/appStore";
 
-
 export default function LanguageSection() {
   const { t } = useTranslation();
 
-  const language = useAppStore(
-    (state) => state.language
-  );
+  const language = useAppStore((state) => state.language);
 
-  const setLanguage = useAppStore(
-    (state) => state.setLanguage
-  );
-
+  const setLanguage = useAppStore((state) => state.setLanguage);
 
   const handleChange = (
     _event: React.MouseEvent<HTMLElement>,
-    value: Language | null
+    value: Language | null,
   ) => {
     if (!value || value === language) {
       return;
@@ -35,41 +27,20 @@ export default function LanguageSection() {
     setLanguage(value);
   };
 
-
   return (
-    <Card sx={{ mb: 3 }}>
-      <CardContent>
+    <Stack spacing={2} sx={{ px: 3, mb: 3 }}>
+      <Typography variant="body1">{t("settings.language")}</Typography>
 
-        <Stack spacing={2}>
+      <ToggleButtonGroup
+        size="small"
+        exclusive
+        value={language}
+        onChange={handleChange}
+      >
+        <ToggleButton value="en">{t("settings.english")}</ToggleButton>
 
-          <Typography
-            variant="h6"
-          >
-            {t("settings.language")}
-          </Typography>
-
-
-          <ToggleButtonGroup
-            exclusive
-            value={language}
-            onChange={handleChange}
-          >
-
-            <ToggleButton value="en">
-              {t("settings.english")}
-            </ToggleButton>
-
-
-            <ToggleButton value="fa">
-              {t("settings.persian")}
-            </ToggleButton>
-
-          </ToggleButtonGroup>
-
-
-        </Stack>
-
-      </CardContent>
-    </Card>
+        <ToggleButton value="fa">{t("settings.persian")}</ToggleButton>
+      </ToggleButtonGroup>
+    </Stack>
   );
 }

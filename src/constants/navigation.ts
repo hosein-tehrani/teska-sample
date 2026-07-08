@@ -22,14 +22,4 @@ export const navigation: NavigationItem[] = [
     path: "/todos",
     icon: ChecklistRoundedIcon,
   },
-  {
-    label: "sidebar.weather",
-    path: "/weather",
-    icon: WbSunnyRoundedIcon,
-  },
-  {
-    label: "sidebar.settings",
-    path: "/settings",
-    icon: SettingsRoundedIcon,
-  },
 ];

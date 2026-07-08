@@ -38,42 +38,22 @@ export default function NameSection() {
     toast.success(t("settings.profileUpdated"));
   };
 
-  const handleChange = (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
   return (
-    <Card sx={{ mb: 3 }}>
-      <CardContent>
+    <Stack spacing={2} className="my-2"> 
+      <TextField
+        fullWidth
+        label={t("settings.name")}
+        value={value}
+        onChange={handleChange}
+      />
 
-        <Typography
-          variant="h6"
-          gutterBottom
-        >
-          {t("settings.profile")}
-        </Typography>
-
-        <Stack spacing={2}>
-
-          <TextField
-            fullWidth
-            label={t("settings.name")}
-            value={value}
-            onChange={handleChange}
-          />
-
-          <Button
-            variant="contained"
-            onClick={handleSave}
-          >
-            {t("common.save")}
-          </Button>
-
-        </Stack>
-
-      </CardContent>
-    </Card>
+      <Button variant="contained" onClick={handleSave}>
+        {t("common.save")}
+      </Button>
+    </Stack>
   );
 }

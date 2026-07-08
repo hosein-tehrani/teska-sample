@@ -1,88 +1,34 @@
-import { useEffect, useState } from "react";
+import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
+
+import WelcomeCard from "@/components/home/WelcomeCard";
+import NameSection from "@/components/settings/NameSection";
+import WeatherCard from "@/components/home/WeatherCard";
 import { useTranslation } from "react-i18next";
 
-import {
-  Card,
-  CardContent,
-  Container,
-  Stack,
-  Typography,
-} from "@mui/material";
-
-import { useAppStore } from "@/store/appStore";
-import { getGreeting } from "@/utils/greeting";
-
-
 export default function HomePage() {
-  const { t, i18n } = useTranslation();
-
-  const username = useAppStore(
-    (state) => state.username
-  );
-
-  const [now, setNow] = useState<Date>(
-    new Date()
-  );
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setNow(new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
+  const { t } = useTranslation();
   return (
     <Container maxWidth="md">
+      <Grid container spacing={3}>
+        <Grid size={{ xs: 12, lg: 6 }}>
+          <WelcomeCard />
+        </Grid>
 
-      <Card>
+        <Grid size={{ xs: 12, lg: 6 }}>
+          <Card sx={{ mb: 3 }}>
+            <CardContent>
+              <Typography variant="h6" gutterBottom>
+                {t("settings.profile")}
+              </Typography>
+              <NameSection />
+            </CardContent>
+          </Card>
+        </Grid>
 
-        <CardContent>
-
-          <Stack
-            spacing={2}
-          >
-
-            <Typography
-              variant="h4"
-            >
-              {getGreeting(t)}
-            </Typography>
-
-            <Typography
-              variant="h5"
-            >
-              {username || t("home.guest")}
-            </Typography>
-
-            <Typography
-              variant="h2"
-            >
-              {now.toLocaleTimeString(
-                i18n.language
-              )}
-            </Typography>
-
-            <Typography
-              variant="h6"
-              color="text.secondary"
-            >
-              {now.toLocaleDateString(
-                i18n.language,
-                {
-                  weekday: "long",
-                }
-              )}
-            </Typography>
-
-          </Stack>
-
-        </CardContent>
-
-      </Card>
-
+        <Grid size={{ xs: 12, lg: 6 }}>
+          <WeatherCard />
+        </Grid>
+      </Grid>
     </Container>
   );
 }

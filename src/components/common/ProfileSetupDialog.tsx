@@ -9,12 +9,12 @@ import {
   DialogTitle,
   Typography,
 } from "@mui/material";
+import NameSection from "../settings/NameSection";
 
 interface ProfileSetupDialogProps {
   open: boolean;
   onClose: () => void;
 }
-
 
 export default function ProfileSetupDialog({
   open,
@@ -23,53 +23,26 @@ export default function ProfileSetupDialog({
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-
   const handleGoToSettings = () => {
     onClose();
 
     navigate("/settings");
   };
 
-
   return (
-    <Dialog
-      open={open}
-      onClose={onClose}
-      maxWidth="sm"
-      fullWidth
-    >
-
-      <DialogTitle>
-        {t("profileDialog.title")}
-      </DialogTitle>
-
+    <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
+      <DialogTitle>{t("profileDialog.title")}</DialogTitle>
 
       <DialogContent>
-        <Typography>
-          {t("profileDialog.description")}
-        </Typography>
+        <Typography>{t("profileDialog.description")}</Typography>
+        <NameSection />
       </DialogContent>
 
-
       <DialogActions>
-
-        <Button
-          onClick={onClose}
-          color="inherit"
-        >
+        <Button onClick={onClose} color="inherit">
           {t("common.later")}
         </Button>
-
-
-        <Button
-          variant="contained"
-          onClick={handleGoToSettings}
-        >
-          {t("profileDialog.goToSettings")}
-        </Button>
-
       </DialogActions>
-
     </Dialog>
   );
 }

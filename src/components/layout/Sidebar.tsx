@@ -16,6 +16,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { navigation } from "@/constants/navigation";
 import { useTranslation } from "react-i18next";
+import LanguageSection from "../settings/LanguageSection";
 
 const drawerWidth = 260;
 interface SidebarProps {
@@ -70,6 +71,8 @@ export default function Sidebar({ mobileOpen, onClose }: SidebarProps) {
           );
         })}
       </List>
+      <Box sx={{ flexGrow: 1 }} />
+      <LanguageSection />
     </>
   );
 

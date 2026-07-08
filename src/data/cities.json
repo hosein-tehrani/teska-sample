@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "nameFa": "تهران",
+    "nameEn": "Tehran",
+    "latitude": 35.6892,
+    "longitude": 51.389
+  },
+  {
+    "id": 2,
+    "nameFa": "تبریز",
+    "nameEn": "Tabriz",
+    "latitude": 38.0969,
+    "longitude": 46.2919
+  },
+  {
+    "id": 3,
+    "nameFa": "ارومیه",
+    "nameEn": "Urmia",
+    "latitude": 37.5497,
+    "longitude": 45.0767
+  },
+  {
+    "id": 4,
+    "nameFa": "اردبیل",
+    "nameEn": "Ardabil",
+    "latitude": 38.25,
+    "longitude": 48.2985
+  },
+  {
+    "id": 5,
+    "nameFa": "اصفهان",
+    "nameEn": "Isfahan",
+    "latitude": 32.6546,
+    "longitude": 51.6679
+  },
+  {
+    "id": 6,
+    "nameFa": "کرج",
+    "nameEn": "Karaj",
+    "latitude": 35.8409,
+    "longitude": 50.9585
+  },
+  {
+    "id": 7,
+    "nameFa": "قم",
+    "nameEn": "Qom",
+    "latitude": 34.6399,
+    "longitude": 50.8759
+  },
+  {
+    "id": 8,
+    "nameFa": "همدان",
+    "nameEn": "Hamadan",
+    "latitude": 34.7989,
+    "longitude": 48.5146
+  },
+  {
+    "id": 9,
+    "nameFa": "زنجان",
+    "nameEn": "Zanjan",
+    "latitude": 36.6822,
+    "longitude": 48.4839
+  },
+  {
+    "id": 10,
+    "nameFa": "سنندج",
+    "nameEn": "Sanandaj",
+    "latitude": 35.3167,
+    "longitude": 46.9833
+  },
+  {
+    "id": 11,
+    "nameFa": "ساری",
+    "nameEn": "Sari",
+    "latitude": 36.6231,
+    "longitude": 53.0616
+  },
+  {
+    "id": 12,
+    "nameFa": "گرگان",
+    "nameEn": "Gorgan",
+    "latitude": 36.8463,
+    "longitude": 54.4357
+  },
+  {
+    "id": 13,
+    "nameFa": "مشهد",
+    "nameEn": "Mashhad",
+    "latitude": 36.2605,
+    "longitude": 59.6168
+  },
+  {
+    "id": 14,
+    "nameFa": "بجنورد",
+    "nameEn": "Bojnurd",
+    "latitude": 37.4713,
+    "longitude": 57.3346
+  },
+  {
+    "id": 15,
+    "nameFa": "بوشهر",
+    "nameEn": "Bushehr",
+    "latitude": 28.9332,
+    "longitude": 50.8466
+  },
+  {
+    "id": 16,
+    "nameFa": "شیراز",
+    "nameEn": "Shiraz",
+    "latitude": 29.5918,
+    "longitude": 52.5837
+  },
+  {
+    "id": 17,
+    "nameFa": "یزد",
+    "nameEn": "Yazd",
+    "latitude": 31.8974,
+    "longitude": 54.3569
+  },
+  {
+    "id": 18,
+    "nameFa": "کرمان",
+    "nameEn": "Kerman",
+    "latitude": 30.2838,
+    "longitude": 57.0834
+  },
+  {
+    "id": 19,
+    "nameFa": "کرمانشاه",
+    "nameEn": "Kermanshah",
+    "latitude": 34.3142,
+    "longitude": 47.065
+  },
+  {
+    "id": 20,
+    "nameFa": "اهواز",
+    "nameEn": "Ahvaz",
+    "latitude": 31.318,
+    "longitude": 48.6703
+  },
+  {
+    "id": 21,
+    "nameFa": "خرم آباد",
+    "nameEn": "Khorramabad",
+    "latitude": 33.4872,
+    "longitude": 48.3553
+  },
+  {
+    "id": 22,
+    "nameFa": "ایلام",
+    "nameEn": "Ilam",
+    "latitude": 33.6369,
+    "longitude": 46.4201
+  },
+  {
+    "id": 23,
+    "nameFa": "اراک",
+    "nameEn": "Arak",
+    "latitude": 34.0901,
+    "longitude": 49.6891
+  },
+  {
+    "id": 24,
+    "nameFa": "رشت",
+    "nameEn": "Rasht",
+    "latitude": 37.2792,
+    "longitude": 49.5832
+  },
+  {
+    "id": 25,
+    "nameFa": "سمنان",
+    "nameEn": "Semnan",
+    "latitude": 35.572,
+    "longitude": 53.394
+  },
+  {
+    "id": 26,
+    "nameFa": "قزوین",
+    "nameEn": "Qazvin",
+    "latitude": 36.2384,
+    "longitude": 50.0
+  },
+  {
+    "id": 27,
+    "nameFa": "اصفهان",
+    "nameEn": "Isfahan",
+    "latitude": 32.6546,
+    "longitude": 51.6679
+  },
+  {
+    "id": 28,
+    "nameFa": "زاهدان",
+    "nameEn": "Zahedan",
+    "latitude": 29.4967,
+    "longitude": 60.8626
+  },
+  {
+    "id": 29,
+    "nameFa": "سنندج",
+    "nameEn": "Sanandaj",
+    "latitude": 35.3167,
+    "longitude": 46.9833
+  }
+]

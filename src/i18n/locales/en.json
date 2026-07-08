@@ -46,8 +46,34 @@
   },
   "profileDialog": {
     "title": "Welcome 👋",
-    "description": "Please update your profile name.",
+    "description": "Please update your name.",
     "goToSettings": "Go to Settings"
+  },
+  "weather": {
+    "city": "City",
+    "forecast": "Forecast",
+    "max": "Max",
+    "min": "Min",
+    "wind": "Wind",
+    "humidity": "Humidity",
+    "error": "Failed to load weather data.",
+    "clearSky": "Clear Sky",
+    "partlyCloudy": "Partly Cloudy",
+    "cloudy": "Cloudy",
+    "fog": "Fog",
+    "rain": "Rain",
+    "snow": "Snow",
+    "thunderstorm": "Thunderstorm",
+    "status": {
+      "clear": "Clear Sky",
+      "partlyCloudy": "Partly Cloudy",
+      "cloudy": "Cloudy",
+      "fog": "Fog",
+      "rain": "Rain",
+      "snow": "Snow",
+      "thunderstorm": "Thunderstorm",
+      "unknown": "Unknown"
+    }
   },
   "settings": {
     "title": "Settings",
