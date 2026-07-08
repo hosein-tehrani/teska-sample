@@ -1,9 +1,11 @@
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import { useEffect, useMemo } from "react";
+import { CacheProvider } from "@emotion/react";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import {  useEffect, useMemo } from "react";
 import type { ReactNode } from "react";
 
-import { useAppStore } from "@/store/appStore";
+import { rtlCache, ltrCache } from "@/theme/cache";
 import { getTheme } from "@/theme/theme";
+import { useAppStore } from "@/store/appStore";
 
 interface Props {
   children: ReactNode;
@@ -13,24 +15,39 @@ export default function AppThemeProvider({
   children,
 }: Props) {
   const mode = useAppStore((state) => state.theme);
+  const language = useAppStore((state) => state.language);
 
   const theme = useMemo(
-    () => getTheme(mode),
-    [mode]
+    () => getTheme(mode, language),
+    [mode, language]
   );
+
+  const cache = language === "fa"
+    ? rtlCache
+    : ltrCache;
 
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-bs-theme",
       mode
     );
-  }, [mode]);
+
+    document.documentElement.dir =
+      language === "fa"
+        ? "rtl"
+        : "ltr";
+
+    document.documentElement.lang =
+      language;
+  }, [mode, language]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <CacheProvider value={cache}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
 
-      {children}
-    </ThemeProvider>
+        {children}
+      </ThemeProvider>
+    </CacheProvider>
   );
 }

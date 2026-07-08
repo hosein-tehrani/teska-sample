@@ -1,9 +1,10 @@
 import { createTheme } from "@mui/material";
 
-import type { ThemeMode } from "@/store/appStore";
+import type { ThemeMode, Language } from "@/store/appStore";
 
-export const getTheme = (mode: ThemeMode) =>
+export const getTheme = (mode: ThemeMode, language: Language) =>
   createTheme({
+    direction: language === "fa" ? "rtl" : "ltr",
     palette: {
       mode,
       primary: {
@@ -16,6 +17,7 @@ export const getTheme = (mode: ThemeMode) =>
     },
 
     typography: {
-      fontFamily: "inherit",
+      fontFamily:
+        language === "fa" ? "Vazirmatn, sans-serif" : "Inter, sans-serif",
     },
   });
