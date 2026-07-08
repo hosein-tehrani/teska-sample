@@ -10,13 +10,35 @@
   "welcome": "خوش آمدید",
   "common": {
     "save": "ذخیره",
-    "later": "بعداً"
+    "later": "بعداً",
+    "cancel": "انصراف",
+    "create": "ایجاد",
+    "delete": "حذف"
   },
   "home": {
     "goodMorning": "صبح بخیر 👋",
     "goodAfternoon": "ظهر بخیر ☀️",
     "goodEvening": "عصر بخیر 🌙",
     "guest": "مهمان"
+  },
+  "todo": {
+    "title": "مدیریت وظایف",
+    "todo": "تعریف شده",
+    "progress": "در حال انجام",
+    "done": "انجام شده",
+    "newTodo": "وظیفه جدید",
+    "editTodo": "ویرایش وظیفه",
+    "titleLabel": "عنوان",
+    "description": "توضیحات",
+    "status": "وضعیت",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "empty": "موردی وجود ندارد.",
+    "created": "وظیفه با موفقیت ایجاد شد.",
+    "updated": "وظیفه با موفقیت بروزرسانی شد.",
+    "deleted": "وظیفه با موفقیت حذف شد.",
+    "deleteTodo": "حذف وظیفه",
+    "deleteDescription": "آیا از حذف این وظیفه مطمئن هستید؟"
   },
   "profileDialog": {
     "title": "خوش آمدید 👋",

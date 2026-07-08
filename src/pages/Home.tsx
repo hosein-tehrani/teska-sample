@@ -43,7 +43,6 @@ export default function HomePage() {
 
           <Stack
             spacing={2}
-            alignItems="center"
           >
 
             <Typography

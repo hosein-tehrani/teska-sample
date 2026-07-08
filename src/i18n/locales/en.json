@@ -14,13 +14,35 @@
   "welcome": "Welcome",
   "common": {
     "save": "Save",
-    "later": "Later"
+    "later": "Later",
+    "cancel": "Cancel",
+    "create": "Create",
+    "delete": "Delete"
   },
   "home": {
     "goodMorning": "Good Morning 👋",
     "goodAfternoon": "Good Afternoon ☀️",
     "goodEvening": "Good Evening 🌙",
     "guest": "Guest"
+  },
+  "todo": {
+    "title": "Todo Board",
+    "todo": "Todo",
+    "progress": "In Progress",
+    "done": "Done",
+    "newTodo": "New Todo",
+    "editTodo": "Edit Todo",
+    "titleLabel": "Title",
+    "description": "Description",
+    "status": "Status",
+    "edit": "Edit",
+    "delete": "Delete",
+    "empty": "No todos yet.",
+    "created": "Todo created successfully.",
+    "updated": "Todo updated successfully.",
+    "deleted": "Todo deleted successfully.",
+    "deleteTodo": "Delete Todo",
+    "deleteDescription": "Are you sure you want to delete this todo?"
   },
   "profileDialog": {
     "title": "Welcome 👋",
