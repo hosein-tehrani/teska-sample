@@ -13,22 +13,22 @@ export interface NavigationItem {
 
 export const navigation: NavigationItem[] = [
   {
-    label: "home",
+    label: "sidebar.home",
     path: "/",
     icon: HomeRoundedIcon,
   },
   {
-    label: "todos",
+    label: "sidebar.todos",
     path: "/todos",
     icon: ChecklistRoundedIcon,
   },
   {
-    label: "weather",
+    label: "sidebar.weather",
     path: "/weather",
     icon: WbSunnyRoundedIcon,
   },
   {
-    label: "setting",
+    label: "sidebar.settings",
     path: "/settings",
     icon: SettingsRoundedIcon,
   },

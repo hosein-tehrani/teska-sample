@@ -1,18 +1,22 @@
 {
-  "dashboard": "داشبورد",
-  "home": "خانه",
-  "todos": "وظایف",
-  "weather": "آب و هوا",
-  "setting": "تنظیمات",
-
-  "goodMorning": "صبح بخیر",
-  "goodAfternoon": "ظهر بخیر",
-  "goodEvening": "عصر بخیر",
+  "sidebar": {
+    "dashboard": "داشبورد",
+    "home": "خانه",
+    "todos": "وظایف",
+    "weather": "آب و هوا",
+    "setting": "تنظیمات"
+  },
 
   "welcome": "خوش آمدید",
   "common": {
     "save": "ذخیره",
     "later": "بعداً"
+  },
+  "home": {
+    "goodMorning": "صبح بخیر 👋",
+    "goodAfternoon": "ظهر بخیر ☀️",
+    "goodEvening": "عصر بخیر 🌙",
+    "guest": "مهمان"
   },
   "profileDialog": {
     "title": "خوش آمدید 👋",

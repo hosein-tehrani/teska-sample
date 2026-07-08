@@ -1,9 +1,11 @@
 {
-  "dashboard": "Dashboard",
-  "home": "Home",
-  "todos": "Todos",
-  "weather": "Weather",
-  "setting": "Settings",
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "todos": "Todos",
+    "weather": "Weather",
+    "settings": "Settings"
+  },
 
   "goodMorning": "Good Morning",
   "goodAfternoon": "Good Afternoon",
@@ -13,6 +15,12 @@
   "common": {
     "save": "Save",
     "later": "Later"
+  },
+  "home": {
+    "goodMorning": "Good Morning 👋",
+    "goodAfternoon": "Good Afternoon ☀️",
+    "goodEvening": "Good Evening 🌙",
+    "guest": "Guest"
   },
   "profileDialog": {
     "title": "Welcome 👋",
