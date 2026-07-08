@@ -1,0 +1,13 @@
+{
+  "dashboard": "Dashboard",
+  "home": "Home",
+  "todos": "Todos",
+  "weather": "Weather",
+  "settings": "Settings",
+
+  "goodMorning": "Good Morning",
+  "goodAfternoon": "Good Afternoon",
+  "goodEvening": "Good Evening",
+
+  "welcome": "Welcome"
+}

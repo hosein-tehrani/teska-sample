@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazir.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazir-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazir-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+html,
+body,
+#root {
+  font-family: Vazirmatn;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.logo {
+  text-align: center;
+  margin: auto !important;
+  font-weight: 900;
+}
+.logo span {
+  color: red;
+}

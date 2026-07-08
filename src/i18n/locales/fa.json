@@ -1,0 +1,13 @@
+{
+  "dashboard": "داشبورد",
+  "home": "خانه",
+  "todos": "وظایف",
+  "weather": "آب و هوا",
+  "settings": "تنظیمات",
+
+  "goodMorning": "صبح بخیر",
+  "goodAfternoon": "ظهر بخیر",
+  "goodEvening": "عصر بخیر",
+
+  "welcome": "خوش آمدید"
+}
