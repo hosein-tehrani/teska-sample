@@ -5,7 +5,12 @@ import Grid from "@mui/material/Grid";
 import TodoColumn from "./TodoColumn";
 
 import { useTodoStore } from "@/store/todoStore";
-import { type Todo, type TodoGroup, TODO_STATUS } from "@/types/todo";
+import {
+  type Todo,
+  type TodoGroup,
+  type TodoStatus,
+  TODO_STATUS,
+} from "@/types/todo";
 import { type DragEndEvent } from "@dnd-kit/core";
 
 import { arrayMove } from "@dnd-kit/sortable";
@@ -30,7 +35,7 @@ export default function TodoBoard({ onEdit, onDelete }: TodoBoardProps) {
 
       done: items.filter((todo) => todo.status === TODO_STATUS.DONE),
     }),
-    [todos],
+    [items],
   );
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -45,6 +50,40 @@ export default function TodoBoard({ onEdit, onDelete }: TodoBoardProps) {
     const activeTodo = items[activeIndex];
 
     const overTodo = items[overIndex];
+    if (!overTodo) {
+      const newStatus = over.id as TodoStatus;
+      if (activeTodo.status === newStatus) {
+        return;
+      }
+      const newItems = items.map((todo) =>
+        todo.id === activeTodo.id
+          ? {
+              ...todo,
+              status: newStatus,
+            }
+          : todo,
+      );
+      setItems(newItems);
+
+      moveTodos(newItems);
+
+      return;
+    }
+    if (activeTodo.status !== overTodo.status) {
+      const updatedTodo = {
+        ...activeTodo,
+
+        status: overTodo.status,
+      };
+      const withoutActive = items.filter((todo) => todo.id !== active.id);
+      const overIndex = withoutActive.findIndex((todo) => todo.id === over.id);
+      withoutActive.splice(overIndex, 0, updatedTodo);
+      setItems(withoutActive);
+
+      moveTodos(withoutActive);
+
+      return;
+    }
 
     if (activeTodo.status === overTodo.status) {
       const newItems = arrayMove(items, activeIndex, overIndex);

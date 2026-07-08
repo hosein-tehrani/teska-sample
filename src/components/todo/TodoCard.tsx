@@ -10,7 +10,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-
+import { DragIndicator } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 
 import type { Todo } from "@/types/todo";
@@ -42,10 +42,8 @@ export default function TodoCard({ todo, onEdit, onDelete }: TodoCardProps) {
       ref={setNodeRef}
       style={style}
       {...attributes}
-      {...listeners}
       variant="outlined"
       sx={{
-        cursor: "grab",
         opacity: isDragging ? 0.5 : 1,
       }}
     >
@@ -60,7 +58,17 @@ export default function TodoCard({ todo, onEdit, onDelete }: TodoCardProps) {
                   <EditIcon fontSize="small" />
                 </IconButton>
               </Tooltip>
-
+              <Tooltip title={t("todo.edit")}>
+                <IconButton
+                  {...listeners}
+                  size="small"
+                  sx={{
+                    cursor: "grab",
+                  }}
+                >
+                  <DragIndicator fontSize="small" />
+                </IconButton>
+              </Tooltip>
               <Tooltip title={t("todo.delete")}>
                 <IconButton
                   color="error"

@@ -48,15 +48,15 @@ export default function TodoColumn({
             <Chip size="small" label={todos.length} />
           </Stack>
 
-          {todos.length === 0 ? (
-            <Typography color="text.secondary" className="center">
-              {t("todo.empty")}
-            </Typography>
-          ) : (
-            <SortableContext
-              items={todos.map((todo) => todo.id)}
-              strategy={verticalListSortingStrategy}
-            >
+          <SortableContext
+            items={todos.map((todo) => todo.id)}
+            strategy={verticalListSortingStrategy}
+          >
+            {todos.length === 0 ? (
+              <Typography color="text.secondary" className="center">
+                {t("todo.empty")}
+              </Typography>
+            ) : (
               <Stack spacing={2}>
                 {todos.map((todo) => (
                   <TodoCard
@@ -67,8 +67,8 @@ export default function TodoColumn({
                   />
                 ))}
               </Stack>
-            </SortableContext>
-          )}
+            )}
+          </SortableContext>
         </Stack>
       </CardContent>
     </Card>
