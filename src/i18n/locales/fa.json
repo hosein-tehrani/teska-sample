@@ -3,11 +3,36 @@
   "home": "خانه",
   "todos": "وظایف",
   "weather": "آب و هوا",
-  "settings": "تنظیمات",
+  "setting": "تنظیمات",
 
   "goodMorning": "صبح بخیر",
   "goodAfternoon": "ظهر بخیر",
   "goodEvening": "عصر بخیر",
 
-  "welcome": "خوش آمدید"
+  "welcome": "خوش آمدید",
+  "common": {
+    "save": "ذخیره",
+    "later": "بعداً"
+  },
+  "profileDialog": {
+    "title": "خوش آمدید 👋",
+    "description": "لطفاً نام خود را در پروفایل بروزرسانی کنید.",
+    "goToSettings": "رفتن به تنظیمات"
+  },
+  "settings": {
+    "title": "تنظیمات",
+
+    "profile": "پروفایل",
+    "name": "نام",
+    "nameRequired": "لطفاً نام خود را وارد کنید.",
+    "profileUpdated": "پروفایل با موفقیت بروزرسانی شد.",
+
+    "appearance": "ظاهر",
+    "darkMode": "حالت تاریک",
+    "lightMode": "حالت روشن",
+
+    "language": "زبان",
+    "english": "انگلیسی",
+    "persian": "فارسی"
+  }
 }

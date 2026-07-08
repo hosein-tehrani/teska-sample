@@ -3,11 +3,36 @@
   "home": "Home",
   "todos": "Todos",
   "weather": "Weather",
-  "settings": "Settings",
+  "setting": "Settings",
 
   "goodMorning": "Good Morning",
   "goodAfternoon": "Good Afternoon",
   "goodEvening": "Good Evening",
 
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "common": {
+    "save": "Save",
+    "later": "Later"
+  },
+  "profileDialog": {
+    "title": "Welcome 👋",
+    "description": "Please update your profile name.",
+    "goToSettings": "Go to Settings"
+  },
+  "settings": {
+    "title": "Settings",
+
+    "profile": "Profile",
+    "name": "Name",
+    "nameRequired": "Please enter your name.",
+    "profileUpdated": "Profile updated successfully.",
+
+    "appearance": "Appearance",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+
+    "language": "Language",
+    "english": "English",
+    "persian": "Persian"
+  }
 }

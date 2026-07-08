@@ -28,7 +28,7 @@ export const navigation: NavigationItem[] = [
     icon: WbSunnyRoundedIcon,
   },
   {
-    label: "settings",
+    label: "setting",
     path: "/settings",
     icon: SettingsRoundedIcon,
   },
