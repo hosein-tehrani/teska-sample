@@ -6,15 +6,14 @@ export const getWeather = async (
   lng: number,
 ): Promise<Weather> => {
   const data = await fetchWeather(lat, lng);
-  
+
   return {
     temperature: data.current.temperature_2m,
-
     humidity: data.current.relative_humidity_2m,
-
     windSpeed: data.current.wind_speed_10m,
-
     weatherCode: data.current.weather_code,
+    max: data.daily.temperature_2m_max[0],
+    min: data.daily.temperature_2m_min[0],
 
     forecast: data.daily.time.slice(1).map((date, index) => ({
       date,

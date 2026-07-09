@@ -5,8 +5,6 @@ import {
   CardContent,
   CircularProgress,
   Divider,
-  Skeleton,
-  Stack,
   Typography,
 } from "@mui/material";
 
@@ -17,6 +15,8 @@ import { useWeatherStore } from "@/store/weatherStore";
 import CityAutocomplete from "../weather/CityAutocomplete";
 import { getWeatherIcon } from "@/utils/weatherIcon";
 import { getWeatherDescription } from "@/utils/weatherDescription";
+import WeatherStats from "../weather/WeatherStats";
+import WeatherForecast from "../weather/WeatherForecast";
 export default function WeatherCard() {
   const { t } = useTranslation();
   const city = useWeatherStore((state) => state.selectedCity);
@@ -49,8 +49,10 @@ export default function WeatherCard() {
             <Typography className="text-center">
               {getWeatherDescription(data.weatherCode, t)}
             </Typography>
-
-            <Stack direction="row" className="mt-4 space-between"></Stack>
+            <Divider className="my-4"></Divider>
+            <WeatherStats weather={data} />
+            <Divider className="my-4"></Divider>
+            <WeatherForecast forecast={data.forecast} />
           </Box>
         )}
       </CardContent>

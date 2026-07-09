@@ -34,5 +34,7 @@ export interface Weather {
   humidity: number;
   windSpeed: number;
   weatherCode: number;
+  max: number;
+  min: number;
   forecast: Forecast[];
 }
