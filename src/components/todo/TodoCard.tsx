@@ -1,9 +1,11 @@
+import styles from "./TodoCard.module.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import {
   Card,
+  CardActions,
   CardContent,
   IconButton,
   Stack,
@@ -47,18 +49,13 @@ export default function TodoCard({ todo, onEdit, onDelete }: TodoCardProps) {
         opacity: isDragging ? 0.5 : 1,
       }}
     >
-      <CardContent>
+      <CardContent className={styles.dragCard}>
         <Stack spacing={2}>
           <Stack direction="row" className="flex-start space-between">
             <Typography variant="subtitle1">{todo.title}</Typography>
 
             <Stack direction="row" spacing={1}>
-              <Tooltip title={t("todo.edit")}>
-                <IconButton size="small" onClick={() => onEdit(todo)}>
-                  <EditIcon fontSize="small" />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title={t("todo.edit")}>
+              <Tooltip title={t("todo.drag")} className={styles.dragBtn}>
                 <IconButton
                   {...listeners}
                   size="small"
@@ -69,15 +66,6 @@ export default function TodoCard({ todo, onEdit, onDelete }: TodoCardProps) {
                   <DragIndicator fontSize="small" />
                 </IconButton>
               </Tooltip>
-              <Tooltip title={t("todo.delete")}>
-                <IconButton
-                  color="error"
-                  size="small"
-                  onClick={() => onDelete(todo)}
-                >
-                  <DeleteIcon fontSize="small" />
-                </IconButton>
-              </Tooltip>
             </Stack>
           </Stack>
 
@@ -86,6 +74,18 @@ export default function TodoCard({ todo, onEdit, onDelete }: TodoCardProps) {
           </Typography>
         </Stack>
       </CardContent>
+      <CardActions>
+        <Tooltip title={t("todo.edit")}>
+          <IconButton size="small" onClick={() => onEdit(todo)}>
+            <EditIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title={t("todo.delete")}>
+          <IconButton color="error" size="small" onClick={() => onDelete(todo)}>
+            <DeleteIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
+      </CardActions>
     </Card>
   );
 }

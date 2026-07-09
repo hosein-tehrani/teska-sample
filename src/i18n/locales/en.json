@@ -36,6 +36,7 @@
     "description": "Description",
     "status": "Status",
     "edit": "Edit",
+    "drag": "drag",
     "delete": "Delete",
     "empty": "No todos yet.",
     "created": "Todo created successfully.",

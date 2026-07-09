@@ -1,0 +1,8 @@
+.dragCard {
+    position: relative;
+}
+.dragBtn {
+  position: absolute !important;
+    top: 2px;
+    right: 2px;
+}

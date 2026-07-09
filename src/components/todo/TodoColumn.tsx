@@ -1,3 +1,4 @@
+import styles from "./TodoColumn.module.css"
 import { Card, CardContent, Chip, Stack, Typography } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
@@ -39,6 +40,7 @@ export default function TodoColumn({
         height: "100%",
         minHeight: 500,
       }}
+      className={styles.column}
     >
       <CardContent>
         <Stack spacing={2}>
