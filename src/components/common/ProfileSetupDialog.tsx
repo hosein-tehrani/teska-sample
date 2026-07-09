@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -20,14 +19,7 @@ export default function ProfileSetupDialog({
   open,
   onClose,
 }: ProfileSetupDialogProps) {
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  const handleGoToSettings = () => {
-    onClose();
-
-    navigate("/settings");
-  };
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>

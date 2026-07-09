@@ -17,11 +17,8 @@ export const getWeather = async (
 
     forecast: data.daily.time.slice(1).map((date, index) => ({
       date,
-
       weatherCode: data.daily.weather_code[index + 1],
-
       max: data.daily.temperature_2m_max[index + 1],
-
       min: data.daily.temperature_2m_min[index + 1],
     })),
   };

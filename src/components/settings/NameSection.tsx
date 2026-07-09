@@ -2,14 +2,7 @@ import { useEffect, useState, type ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
 
-import {
-  Button,
-  Card,
-  CardContent,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, Stack, TextField } from "@mui/material";
 
 import { useAppStore } from "@/store/appStore";
 
@@ -43,14 +36,13 @@ export default function NameSection() {
   };
 
   return (
-    <Stack spacing={2} className="my-2"> 
+    <Stack spacing={2} className="my-2">
       <TextField
         fullWidth
         label={t("settings.name")}
         value={value}
         onChange={handleChange}
       />
-
       <Button variant="contained" onClick={handleSave}>
         {t("common.save")}
       </Button>

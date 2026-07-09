@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@mui/material";
 
+// types 
 interface ConfirmDialogProps {
   open: boolean;
   title: string;

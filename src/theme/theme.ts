@@ -1,7 +1,7 @@
 import { createTheme, type PaletteMode } from "@mui/material";
 
 const BORDER_RADIUS = 4;
-import type { ThemeMode, Language } from "@/store/appStore";
+import type { Language } from "@/store/appStore";
 
 export const getTheme = (mode: PaletteMode, language: Language) =>
   createTheme({

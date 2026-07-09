@@ -19,10 +19,6 @@ export default function TodosPage() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [selectedTodo, setSelectedTodo] = useState<Todo | null>(null);
 
-  const handleCreate = () => {
-    setSelectedTodo(null);
-    setDialogOpen(true);
-  };
   const handleEdit = (todo: Todo) => {
     setSelectedTodo(todo);
     setDialogOpen(true);

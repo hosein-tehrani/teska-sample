@@ -1,11 +1,9 @@
 import { Air, WaterDrop, Thermostat } from "@mui/icons-material";
-
 import { Box, Stack, Typography } from "@mui/material";
-
 import { useTranslation } from "react-i18next";
 
+// types
 import type { Weather } from "@/types/weather";
-
 interface Props {
   weather: Weather;
 }
@@ -45,7 +43,7 @@ export default function WeatherStats({ weather }: Props) {
       sx={{
         justifyContent: "space-around",
         alignItems: "center",
-        margin: "5px"
+        margin: "5px",
       }}
     >
       {items.map((item) => (

@@ -1,9 +1,8 @@
 import { Autocomplete, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
 import cities from "@/data/cities.json";
-
 import { useWeatherStore } from "@/store/weatherStore";
+// types 
 import type { City } from "@/types/weather";
 
 export default function CityAutocomplete() {

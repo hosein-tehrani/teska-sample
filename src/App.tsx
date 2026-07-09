@@ -8,7 +8,6 @@ function App() {
     <>
       <AppProviders>
         <RouterProvider router={router} />
-
         <Toaster position="top-right" reverseOrder={false} />
       </AppProviders>
     </>

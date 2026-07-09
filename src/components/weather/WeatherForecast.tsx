@@ -1,11 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
-
 import { useTranslation } from "react-i18next";
-
-import type { Forecast } from "@/types/weather";
-
 import { getWeatherIcon } from "@/utils/weatherIcon";
 
+// types 
+import type { Forecast } from "@/types/weather";
 interface Props {
   forecast: Forecast[];
 }

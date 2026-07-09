@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
-
 import { useWeather } from "@/hooks/useWeather";
 import { useWeatherStore } from "@/store/weatherStore";
 import CityAutocomplete from "../weather/CityAutocomplete";
@@ -17,17 +16,19 @@ import { getWeatherIcon } from "@/utils/weatherIcon";
 import { getWeatherDescription } from "@/utils/weatherDescription";
 import WeatherStats from "../weather/WeatherStats";
 import WeatherForecast from "../weather/WeatherForecast";
+
 export default function WeatherCard() {
   const { t } = useTranslation();
+
   const city = useWeatherStore((state) => state.selectedCity);
+
   const { data, isLoading, error } = useWeather(city.latitude, city.longitude);
-  console.log(data);
+
   return (
     <Card>
       <CardContent>
         <CityAutocomplete />
         <Divider sx={{ my: 3 }} />
-
         {isLoading && (
           <p className="text-center mx-auto">
             <CircularProgress aria-label="Loading…" />
@@ -36,7 +37,6 @@ export default function WeatherCard() {
         {!isLoading && error && (
           <Alert severity="error">{t("weather.error")}</Alert>
         )}
-
         {!isLoading && data && (
           <Box>
             <Typography variant="h4" className="text-center">

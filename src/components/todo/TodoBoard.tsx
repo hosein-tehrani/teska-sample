@@ -40,21 +40,26 @@ export default function TodoBoard({ onEdit, onDelete }: TodoBoardProps) {
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
+    // Drag خارج از Droppable
     if (!over) return;
-    if (active.id === over.id) {
-      return;
-    }
+
+    // روی خودش رها شده
+    if (active.id === over.id) return;
+
     const activeIndex = items.findIndex((todo) => todo.id === active.id);
 
     const overIndex = items.findIndex((todo) => todo.id === over.id);
-    const activeTodo = items[activeIndex];
 
+    const activeTodo = items[activeIndex];
     const overTodo = items[overIndex];
+
+    // Drop روی ستون (نه روی یک کارت)
     if (!overTodo) {
       const newStatus = over.id as TodoStatus;
-      if (activeTodo.status === newStatus) {
-        return;
-      }
+
+      // اگر وضعیت تغییری نکرده نیازی به آپدیت نیست
+      if (activeTodo.status === newStatus) return;
+
       const newItems = items.map((todo) =>
         todo.id === activeTodo.id
           ? {
@@ -63,35 +68,39 @@ export default function TodoBoard({ onEdit, onDelete }: TodoBoardProps) {
             }
           : todo,
       );
-      setItems(newItems);
 
+      setItems(newItems);
       moveTodos(newItems);
 
       return;
     }
+
+    // انتقال کارت بین دو ستون مختلف
     if (activeTodo.status !== overTodo.status) {
       const updatedTodo = {
         ...activeTodo,
-
         status: overTodo.status,
       };
-      const withoutActive = items.filter((todo) => todo.id !== active.id);
-      const overIndex = withoutActive.findIndex((todo) => todo.id === over.id);
-      withoutActive.splice(overIndex, 0, updatedTodo);
-      setItems(withoutActive);
 
-      moveTodos(withoutActive);
+      // ابتدا کارت فعال حذف می‌شود
+      const newItems = items.filter((todo) => todo.id !== active.id);
 
-      return;
-    }
+      // سپس قبل از کارت مقصد درج می‌شود
+      const targetIndex = newItems.findIndex((todo) => todo.id === over.id);
 
-    if (activeTodo.status === overTodo.status) {
-      const newItems = arrayMove(items, activeIndex, overIndex);
+      newItems.splice(targetIndex, 0, updatedTodo);
 
       setItems(newItems);
       moveTodos(newItems);
+
       return;
     }
+
+    // جابه‌جایی داخل همان ستون
+    const newItems = arrayMove(items, activeIndex, overIndex);
+
+    setItems(newItems);
+    moveTodos(newItems);
   };
   return (
     <DndContext collisionDetection={closestCorners} onDragEnd={handleDragEnd}>

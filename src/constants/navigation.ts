@@ -1,7 +1,5 @@
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
-import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
-import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 
 import type { SvgIconComponent } from "@mui/icons-material";
 
