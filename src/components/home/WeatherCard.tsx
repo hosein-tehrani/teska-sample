@@ -27,10 +27,12 @@ export default function WeatherCard() {
       <CardContent>
         <CityAutocomplete />
         <Divider sx={{ my: 3 }} />
-        
-        {isLoading && <p className="text-center mx-auto">
-          <CircularProgress aria-label="Loading…" />
-        </p>}
+
+        {isLoading && (
+          <p className="text-center mx-auto">
+            <CircularProgress aria-label="Loading…" />
+          </p>
+        )}
         {!isLoading && error && (
           <Alert severity="error">{t("weather.error")}</Alert>
         )}
